@@ -1,0 +1,326 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Main",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 480,
+            "Height": 272,
+            "RelativeFilename": "background.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "light",
+            "Width": 119,
+            "Height": 134,
+            "Pressed": "light_pressed.png",
+            "Released": "light_unpressed.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button",
+            "X": 121,
+            "Y": 137,
+            "Width": 119,
+            "Height": 134,
+            "Pressed": "light_pressed.png",
+            "Released": "light_unpressed.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "radiator",
+            "X": 1,
+            "Y": 137,
+            "Width": 119,
+            "Height": 134,
+            "Pressed": "radiator_pressed.png",
+            "Released": "radiator_unpressed.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "blind",
+            "X": 121,
+            "Y": 1,
+            "Width": 119,
+            "Height": 134,
+            "Pressed": "blind_pressed.png",
+            "Released": "blind_unpressed.png"
+          },
+          {
+            "Type": "DigitalClock",
+            "Name": "digitalClock1",
+            "X": 253,
+            "Y": 38,
+            "Width": 221,
+            "Height": 62,
+            "TextColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextId": "__SingleUse_48BK",
+            "DisplaySeconds": true,
+            "DisplayLeadingZeroForHourIndicator": true,
+            "InitialHour": 15,
+            "InitialMinute": 25,
+            "InitialSecond": 54
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "RadiatorScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "radiator"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Radiator"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Radiator",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 480,
+            "Height": 272,
+            "RelativeFilename": "radiator_background.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1",
+            "X": 283,
+            "Y": 186,
+            "Width": 82,
+            "Height": 35,
+            "Pressed": "radiator_button_pressed2.png",
+            "Released": "radiator_button_unpressed2.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1_1",
+            "X": 283,
+            "Y": 230,
+            "Width": 82,
+            "Height": 35,
+            "Pressed": "radiator_button_pressed2_down.png",
+            "Released": "radiator_button_unpressed2_down.png"
+          },
+          {
+            "Type": "DynamicGraph",
+            "Name": "dynamicGraph1",
+            "X": 35,
+            "Y": 22,
+            "Width": 410,
+            "Height": 149,
+            "DataSeed": -2058356528,
+            "NumberOfValues": 100,
+            "MaxY": 30.0,
+            "Precision": "1",
+            "LastIndex": 99,
+            "XAxisScale": 1.0,
+            "InsertRandomValues": true,
+            "LabelSizeTop": 8,
+            "LabelSizeBottom": 17,
+            "LabelSizeLeft": 20,
+            "PaddingLeft": 5,
+            "GraphType": "GraphWrapClear",
+            "GraphDrawers": [
+              {
+                "Type": "LineDrawer",
+                "LineWidth": 2,
+                "FileNameImage": "",
+                "Color": {
+                  "Red": 20,
+                  "Green": 151,
+                  "Blue": 197
+                }
+              }
+            ],
+            "YAxisGrid": {
+              "Type": "GraphGrid",
+              "Color": {
+                "Red": 20,
+                "Green": 151,
+                "Blue": 197
+              },
+              "Interval": 10.0,
+              "LineWidth": 1
+            },
+            "XAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 10.0,
+              "DecimalSeparator": "Point",
+              "TextColor": {
+                "Red": 20,
+                "Green": 151,
+                "Blue": 197
+              },
+              "TextId": "__SingleUse_T3JG",
+              "TextRotation": "0",
+              "Position": "Bottom"
+            },
+            "YAxisLabel": {
+              "Type": "GraphLabel",
+              "Interval": 10.0,
+              "DecimalSeparator": "Point",
+              "TextColor": {
+                "Red": 20,
+                "Green": 151,
+                "Blue": 197
+              },
+              "TextId": "__SingleUse_9U18",
+              "TextRotation": "0",
+              "Position": "Left"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textCounter",
+            "X": 388,
+            "Y": 195,
+            "Width": 72,
+            "Height": 64,
+            "TextId": "__SingleUse_926Q",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_HAR0",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "DynamicGraph",
+            "Name": "dynamicGraph2",
+            "X": 35,
+            "Y": 22,
+            "Width": 410,
+            "Height": 149,
+            "DataSeed": -1422091660,
+            "NumberOfValues": 100,
+            "MaxY": 30.0,
+            "Precision": "0.001",
+            "LastIndex": 99,
+            "XAxisScale": 1.0,
+            "InsertRandomValues": true,
+            "LabelSizeTop": 8,
+            "LabelSizeBottom": 17,
+            "LabelSizeLeft": 20,
+            "PaddingLeft": 5,
+            "GraphType": "GraphWrapClear",
+            "GraphDrawers": [
+              {
+                "Type": "LineDrawer",
+                "LineWidth": 2,
+                "Color": {
+                  "Red": 221,
+                  "Green": 255
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "buttonUpClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonUpClicked"
+            }
+          },
+          {
+            "InteractionName": "buttonDownClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button1_1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "buttonDownClicked"
+            }
+          },
+          {
+            "InteractionName": "backMain",
+            "Trigger": {
+              "Type": "TriggerGraphDragged",
+              "TriggerComponent": "dynamicGraph2"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Main"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "Domotique",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Main",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project --project-file=../STM32F746G_DISCO.ioc --platform=m7",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommand": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommand": "make -f ../gcc/Makefile flash -j8",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7"
+  },
+  "Version": "4.19.0",
+  "CreatedBy": "4.19.0"
+}
